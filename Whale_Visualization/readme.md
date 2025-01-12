@@ -71,4 +71,4 @@ saveWidget(May_visualization@map, file = "May_visualization.html", selfcontained
 - Ensure the dataset is placed in your working directory before running the script.
 - The coordinate reference system (CRS) used is EPSG:4269, which is appropriate for geographic data in North America.
 
-For more details, visit [Alex D's Whale Data](https://alexd106.github.io/BI5009/data.html).
+For more details, visit [Alex D's page full of datasets](https://alexd106.github.io/BI5009/data.html).
