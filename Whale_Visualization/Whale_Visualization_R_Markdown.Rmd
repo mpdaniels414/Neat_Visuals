@@ -1,4 +1,11 @@
+---
+title: "Whale_Visualizations"
+author: "Michael Daniels"
+date: "2025-01-12"
+output: html_document
+---
 
+```{r setup, include=FALSE}
 library(tidyverse)
 library(readxl)
 library(mapview)
@@ -10,3 +17,6 @@ View(May_data)
 View(October_data)
 mapview(May_data, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
 mapview(October_data, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+```
+
+

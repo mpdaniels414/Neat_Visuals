@@ -9,7 +9,8 @@ This repository serves as a gallery of neat visuals I've been able to create usi
 ## Tools Used
 
 - **R**: The main language used for data manipulation and visualization.
-- **mapview**: The main package used for visualizing the data.  
+  - **Packages used in R**
+    - **mapview**: The main package used for visualizing the data.  
 
 ## Features
 
