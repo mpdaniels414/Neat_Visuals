@@ -1,0 +1,12 @@
+
+library(tidyverse)
+library(readxl)
+library(mapview)
+whaledata <- read_excel("C:\\Users\\maggi\\Downloads\\whaledata.xlsx")
+View(whaledata)
+May_data = whaledata[1:50,1:8]
+October_data = whaledata[51:100,1:8]
+View(May_data)
+View(October_data)
+mapview(May_data, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+mapview(October_data, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
