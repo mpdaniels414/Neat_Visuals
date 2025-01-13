@@ -4,9 +4,7 @@ This project uses the `whaledata.xlsx` dataset provided by [Alex D](https://alex
 
 ## Dataset
 
-The dataset, `whaledata.xlsx`, contains information on whale sightings, including latitude, longitude, and the month of observation. It is sourced from:
-
-[https://alexd106.github.io/BI5009/data.html](https://alexd106.github.io/BI5009/data.html)
+The dataset, `whaledata.xlsx`, contains information on whale sightings, including latitude, longitude, and the month of observation. 
 
 ### Key Columns in the Dataset
 - `latitude`: Latitude of the whale sighting.
