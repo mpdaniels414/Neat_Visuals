@@ -1,0 +1,73 @@
+---
+title: "Bird_Migration"
+author: "Michael Daniels"
+date: "2025-01-13"
+output: html_document
+---
+
+```{r}
+library(mapview)
+library(dplyr)
+```
+
+```{r}
+bird_data <- read.csv("data/bird_migration.csv")
+```
+
+```{r}
+# Convert date_time to Date format and extract the date
+bird_data_filtered <- bird_data %>% 
+  filter(bird_name == "Eric") %>%
+  mutate(date = as.Date(date_time)) %>%
+  group_by(date) %>%
+  slice_max(speed_2d, with_ties = FALSE) %>%
+  ungroup()
+
+# View the result
+print(bird_data_filtered)
+```
+
+```{r}
+bird_data_filtered
+```
+```{r}
+# Identify start and end points
+start_point <- bird_data_filtered[1, ]
+end_point <- bird_data_filtered[nrow(bird_data_filtered), ]
+```
+
+
+```{r}
+# Plot the flight paths using mapview
+map <- mapview(
+  bird_data_filtered,
+  xcol = "longitude",
+  ycol = "latitude",
+  zcol = "speed_2d",  # Color by speed
+  legend = TRUE, 
+  crs = 4269, 
+  grid = FALSE
+)
+
+# Add start and end points with distinct markers
+map <- map +
+  mapview(
+    start_point,
+    xcol = "longitude",
+    ycol = "latitude",
+    col.regions = "green",
+    label = "Start"
+  ) +
+  mapview(
+    end_point,
+    xcol = "longitude",
+    ycol = "latitude",
+    col.regions = "red",
+    label = "End"
+  )
+
+# Display the map
+map
+
+```
+
