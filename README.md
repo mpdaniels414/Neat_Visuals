@@ -6,6 +6,11 @@ Welcome to **Neat_Visuals**! This repository is a collection of stunning visuals
 
 This repository serves as a gallery of neat visuals I've been able to create using R. While I may include snippets of code here and there, the primary focus is on preserving and sharing the visuals themselves. Whether you're here for inspiration, learning, or just to admire some cool graphics, I hope you enjoy exploring these creations!
 
+## Files and Projects
+
+- **Whale Migration**
+- **Bird Migration**
+
 ## Tools Used
 
 - **R**: The main language used for data manipulation and visualization.
